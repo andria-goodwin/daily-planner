@@ -1,6 +1,6 @@
-var dateEl = document.getElementById("currentDay");
+var today = dayjs();
 
-dateEl.textContent = dayjs().format("dddd, MMMM D")
+$('#currentDay').text(today.format("dddd, MMMM D"));
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
