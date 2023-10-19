@@ -57,7 +57,7 @@ $(function () {
       hour11.addclass('past');
     }
 
-    if (currentHour === '24') {
+    if (currentHour === '12') {
       hour12.addClass('present');
     } else if (currentHour === '13' || '14' || '15'|| '16' || '17') {
       hour12.addClass('past');
