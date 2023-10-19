@@ -27,88 +27,89 @@ $(function () {
     var hour3 = $('#hour-3');
     var hour4 = $('#hour-4');
     var hour5 = $('#hour-5');
+    var currentHour = dayjs().format('HH');
 
-    if (dayjs().format('HH') === '09') {
+    if (currentHour === '09') {
       hour9.addClass('present');
-    } else if (dayjs().format('HH') === '10' || '11' || '12' || '13' || '14' || '15'|| '16' || '17') {
+    } else if (currentHour === '10' || '11' || '12' || '13' || '14' || '15'|| '16' || '17') {
       hour9.addClass('past');
     } else {
       hour9.addclass('past');
     }
 
-    if (dayjs().format('HH') === '10') {
+    if (currentHour === '10') {
       hour10.addClass('present');
-    } else if (dayjs().format('HH') === '11' || '12' || '13' || '14' || '15'|| '16' || '17') {
+    } else if (currentHour === '11' || '12' || '13' || '14' || '15'|| '16' || '17') {
       hour10.addClass('past');
-    } else if (dayjs().format('HH') === '09') {
+    } else if (currentHour === '09') {
       hour10.addClass('future');
     } else {
       hour10.addclass('past');
     }
 
-    if (dayjs().format('HH') === '11') {
+    if (currentHour === '11') {
       hour11.addClass('present');
-    } else if (dayjs().format('HH') === '12' || '13' || '14' || '15'|| '16' || '17') {
+    } else if (currentHour === '12' || '13' || '14' || '15'|| '16' || '17') {
       hour11.addClass('past');
-    } else if (dayjs().format('HH') === '09' || '10') {
+    } else if (currentHour === '09' || '10') {
       hour11.addClass('future');
     } else {
       hour11.addclass('past');
     }
 
-    if (dayjs().format('HH') === '12') {
+    if (currentHour === '24') {
       hour12.addClass('present');
-    } else if (dayjs().format('HH') === '13' || '14' || '15'|| '16' || '17') {
+    } else if (currentHour === '13' || '14' || '15'|| '16' || '17') {
       hour12.addClass('past');
-    } else if (dayjs().format('HH') === '09' || '10' || '11') {
+    } else if (currentHour === '09' || '10' || '11') {
       hour12.addClass('future');
     } else {
       hour12.addclass('past');
     }
 
-    if (dayjs().format('HH') === '13') {
+    if (currentHour === '13') {
       hour1.addClass('present');
-    } else if (dayjs().format('HH') === '14' || '15'|| '16' || '17') {
+    } else if (currentHour === '14' || '15'|| '16' || '17') {
       hour1.addClass('past');
-    } else if (dayjs().format('HH') === '09' || '10' || '11' || '12') {
+    } else if (currentHour === '09' || '10' || '11' || '12') {
       hour1.addClass('future');
     } else {
       hour1.addclass('past');
     }
 
-    if (dayjs().format('HH') === '14') {
+    if (currentHour === '14') {
       hour2.addClass('present');
-    } else if (dayjs().format('HH') === '15'|| '16' || '17') {
+    } else if (currentHour === '15'|| '16' || '17') {
       hour2.addClass('past');
-    } else if (dayjs().format('HH') === '09' || '10' || '11' || '12' || '13') {
+    } else if (currentHour === '09' || '10' || '11' || '12' || '13') {
       hour2.addClass('future');
     } else {
       hour2.addclass('past');
     }
 
-    if (dayjs().format('HH') === '15') {
+    if (currentHour === '15') {
       hour3.addClass('present');
-    } else if (dayjs().format('HH') === '16' || '17') {
+    } else if (currentHour === '16' || '17') {
       hour3.addClass('past');
-    } else if (dayjs().format('HH') === '09' || '10' || '11' || '12' || '13' || '14') {
+    } else if (currentHour === '09' || '10' || '11' || '12' || '13' || '14') {
       hour3.addClass('future');
     } else {
       hour3.addclass('past');
     }
 
-    if (dayjs().format('HH') === '16') {
+    if (currentHour === '16') {
       hour4.addClass('present');
-    } else if (dayjs().format('HH') === '17') {
+    } else if (currentHour === '17') {
       hour4.addClass('past');
-    } else if (dayjs().format('HH') === '09' || '10' || '11' || '12' || '13' || '14' || '15') {
+    } else if (currentHour === '09' || '10' || '11' || '12' || '13' || '14' || '15') {
       hour4.addClass('future');
     } else {
       hour4.addclass('past');
     }
 
-    if (dayjs().format('HH') === '17') {
+    if (currentHour === '17') {
       hour5.addClass('present');
-    } else if (dayjs().format('HH') === '09' || '10' || '11' || '12' || '13' || '14' || '15' || '16') {
+    } else if (currentHour === '09' || '10' || '11' || '12' || '13' || '14' || '15' || '16') {
       hour5.addClass('future');
     } else {
       hour5.addclass('past');
