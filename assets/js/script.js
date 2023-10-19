@@ -12,6 +12,29 @@ $(function () {
     // function? How can DOM traversal be used to get the "hour-x" id of the
     // time-block containing the button that was clicked? How might the id be
     // useful when saving the description in local storage?
+
+
+    // Event listener for saveBtn click
+    $('.saveBtn').on('click', function () {
+      // get values of the description in jQuery
+      var inputValue = $(this).siblings('.description').val();
+      // get the id attribute of the parent div element
+      var hourId = $(this).parent().attr('id');
+
+      // save in local storage
+      localStorage.setItem(hourId, inputValue);
+    });
+
+    // Get item from local storage if any
+    $('#hour-9 .description').val(localStorage.getItem('hour-9'));
+    $('#hour-10 .description').val(localStorage.getItem('hour-10'));
+    $('#hour-11 .description').val(localStorage.getItem('hour-11'));
+    $('#hour-12 .description').val(localStorage.getItem('hour-12'));
+    $('#hour-1 .description').val(localStorage.getItem('hour-1'));
+    $('#hour-2 .description').val(localStorage.getItem('hour-2'));
+    $('#hour-3 .description').val(localStorage.getItem('hour-3'));
+    $('#hour-4 .description').val(localStorage.getItem('hour-4'));
+    $('#hour-5 .description').val(localStorage.getItem('hour-5'));
     //
     // TODO: Add code to apply the past, present, or future class to each time
     // block by comparing the id to the current hour. HINTS: How can the id
