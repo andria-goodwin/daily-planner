@@ -44,6 +44,11 @@ body {
     background-color: #77dd77;
     color: white;
   }
+
+  .after-hours {
+    background-color: lightpink;
+    color: white;
+  }
   
   .saveBtn {
     border-left: 1px solid black;

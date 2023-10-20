@@ -22,6 +22,9 @@ $(function () {
     var hour4 = $('#hour-4');
     var hour5 = $('#hour-5');
     var currentHour = dayjs().format('HH');
+    // var currentHour = '11';
+
+    // console.log(dayjs().format('HH'));
 
     // if statements to compare the current hour (24hr time)
     // adds classes to each element as appropriate
@@ -30,7 +33,7 @@ $(function () {
     } else if (currentHour === '10' || '11' || '12' || '13' || '14' || '15'|| '16' || '17') {
       hour9.addClass('past');
     } else {
-      hour9.addclass('past');
+      hour9.addclass('after-hours');
     }
 
     if (currentHour === '10') {
@@ -40,7 +43,7 @@ $(function () {
     } else if (currentHour === '09') {
       hour10.addClass('future');
     } else {
-      hour10.addclass('past');
+      hour10.addclass('after-hours');
     }
 
     if (currentHour === '11') {
@@ -50,7 +53,7 @@ $(function () {
     } else if (currentHour === '09' || '10') {
       hour11.addClass('future');
     } else {
-      hour11.addclass('past');
+      hour11.addclass('after-hours');
     }
 
     if (currentHour === '12') {
@@ -60,7 +63,7 @@ $(function () {
     } else if (currentHour === '09' || '10' || '11') {
       hour12.addClass('future');
     } else {
-      hour12.addclass('past');
+      hour12.addclass('after-hours');
     }
 
     if (currentHour === '13') {
@@ -70,7 +73,7 @@ $(function () {
     } else if (currentHour === '09' || '10' || '11' || '12') {
       hour1.addClass('future');
     } else {
-      hour1.addclass('past');
+      hour1.addclass('after-hours');
     }
 
     if (currentHour === '14') {
@@ -80,7 +83,7 @@ $(function () {
     } else if (currentHour === '09' || '10' || '11' || '12' || '13') {
       hour2.addClass('future');
     } else {
-      hour2.addclass('past');
+      hour2.addclass('after-hours');
     }
 
     if (currentHour === '15') {
@@ -90,7 +93,7 @@ $(function () {
     } else if (currentHour === '09' || '10' || '11' || '12' || '13' || '14') {
       hour3.addClass('future');
     } else {
-      hour3.addclass('past');
+      hour3.addclass('after-hours');
     }
 
     if (currentHour === '16') {
@@ -100,7 +103,7 @@ $(function () {
     } else if (currentHour === '09' || '10' || '11' || '12' || '13' || '14' || '15') {
       hour4.addClass('future');
     } else {
-      hour4.addclass('past');
+      hour4.addclass('after-hours');
     }
 
     if (currentHour === '17') {
@@ -108,7 +111,7 @@ $(function () {
     } else if (currentHour === '09' || '10' || '11' || '12' || '13' || '14' || '15' || '16') {
       hour5.addClass('future');
     } else {
-      hour5.addclass('past');
+      hour5.addclass('after-hours');
     }
     
     // Get input values from local storage
