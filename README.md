@@ -20,7 +20,7 @@ The time blocks are color coded based on what hour it is. The time blocks are gr
 
 ![Daily planner color coded time blocks](assets/images/AG-timeblocks.png)
 
-Events can be saved within the time blocks by simply entering the text in the desired time block and then clicking to corresponding save button. The event will be saved to local storage so even if you refresh the page it will be there until deleted.
+Events can be saved within the time blocks by simply entering the text in the desired time block and then clicking the corresponding save button. The event will be saved to local storage so even if you refresh the page it will be there until deleted.
 
 ![Daily planner saved events](assets/images/AG-saved-events.png)
 
