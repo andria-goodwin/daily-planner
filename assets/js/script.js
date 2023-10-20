@@ -21,97 +21,106 @@ $(function () {
     var hour3 = $('#hour-3');
     var hour4 = $('#hour-4');
     var hour5 = $('#hour-5');
-    var currentHour = dayjs().format('HH');
-    // var currentHour = '11';
+    var currentHour = Number(dayjs().format("H"));
 
-    // console.log(dayjs().format('HH'));
+    // used to test different times
+    // var currentHour = 24;
 
     // if statements to compare the current hour (24hr time)
     // adds classes to each element as appropriate
-    if (currentHour === '09') {
+    if (currentHour === 9) {
       hour9.addClass('present');
-    } else if (currentHour === '10' || '11' || '12' || '13' || '14' || '15'|| '16' || '17') {
+    } else if (currentHour > 9 && currentHour < 18) {
       hour9.addClass('past');
-    } else {
-      hour9.addclass('after-hours');
     }
 
-    if (currentHour === '10') {
+    if (currentHour === 10) {
       hour10.addClass('present');
-    } else if (currentHour === '11' || '12' || '13' || '14' || '15'|| '16' || '17') {
+    } else if (currentHour > 10 && currentHour < 18) {
       hour10.addClass('past');
-    } else if (currentHour === '09') {
+    } else if (currentHour < 10 && currentHour > 8) {
       hour10.addClass('future');
-    } else {
-      hour10.addclass('after-hours');
     }
 
-    if (currentHour === '11') {
+    if (currentHour === 11) {
       hour11.addClass('present');
-    } else if (currentHour === '12' || '13' || '14' || '15'|| '16' || '17') {
+    } else if (currentHour > 11 && currentHour < 18) {
       hour11.addClass('past');
-    } else if (currentHour === '09' || '10') {
+    } else if (currentHour < 11 && currentHour > 8) {
       hour11.addClass('future');
-    } else {
-      hour11.addclass('after-hours');
     }
 
-    if (currentHour === '12') {
+    if (currentHour === 12) {
       hour12.addClass('present');
-    } else if (currentHour === '13' || '14' || '15'|| '16' || '17') {
+    } else if (currentHour > 12 && currentHour < 18) {
       hour12.addClass('past');
-    } else if (currentHour === '09' || '10' || '11') {
+    } else if (currentHour < 12 && currentHour > 8) {
       hour12.addClass('future');
-    } else {
-      hour12.addclass('after-hours');
     }
 
-    if (currentHour === '13') {
+    if (currentHour === 13) {
       hour1.addClass('present');
-    } else if (currentHour === '14' || '15'|| '16' || '17') {
+    } else if (currentHour > 13 && currentHour < 18) {
       hour1.addClass('past');
-    } else if (currentHour === '09' || '10' || '11' || '12') {
+    } else if (currentHour < 13 && currentHour > 8) {
       hour1.addClass('future');
-    } else {
-      hour1.addclass('after-hours');
     }
 
-    if (currentHour === '14') {
+    if (currentHour === 14) {
       hour2.addClass('present');
-    } else if (currentHour === '15'|| '16' || '17') {
+    } else if (currentHour > 14 && currentHour < 18) {
       hour2.addClass('past');
-    } else if (currentHour === '09' || '10' || '11' || '12' || '13') {
+    } else if (currentHour < 14 && currentHour > 8) {
       hour2.addClass('future');
-    } else {
-      hour2.addclass('after-hours');
     }
 
-    if (currentHour === '15') {
+    if (currentHour === 15) {
       hour3.addClass('present');
-    } else if (currentHour === '16' || '17') {
+    } else if (currentHour > 15 && currentHour < 18) {
       hour3.addClass('past');
-    } else if (currentHour === '09' || '10' || '11' || '12' || '13' || '14') {
+    } else if (currentHour < 15 && currentHour > 8) {
       hour3.addClass('future');
-    } else {
-      hour3.addclass('after-hours');
     }
 
-    if (currentHour === '16') {
+    if (currentHour === 16) {
       hour4.addClass('present');
-    } else if (currentHour === '17') {
+    } else if (currentHour > 16 && currentHour < 18) {
       hour4.addClass('past');
-    } else if (currentHour === '09' || '10' || '11' || '12' || '13' || '14' || '15') {
+    } else if (currentHour < 16 && currentHour > 8) {
       hour4.addClass('future');
-    } else {
-      hour4.addclass('after-hours');
     }
 
-    if (currentHour === '17') {
+    if (currentHour === 17) {
       hour5.addClass('present');
-    } else if (currentHour === '09' || '10' || '11' || '12' || '13' || '14' || '15' || '16') {
+    } else if (currentHour < 17 && currentHour > 8) {
       hour5.addClass('future');
-    } else {
-      hour5.addclass('after-hours');
+    }
+
+    // add a class to all hours outside of 9-5
+    if (currentHour === 1 ||
+      currentHour === 2 ||
+      currentHour === 3 ||
+      currentHour === 4 ||
+      currentHour === 5 ||
+      currentHour === 6 ||
+      currentHour === 7 ||
+      currentHour === 8 ||
+      currentHour === 18 ||
+      currentHour === 19 ||
+      currentHour === 20 ||
+      currentHour === 21 ||
+      currentHour === 22 ||
+      currentHour === 23 ||
+      currentHour === 24) {
+      hour9.addClass('after-hours');
+      hour10.addClass('after-hours');
+      hour11.addClass('after-hours');
+      hour12.addClass('after-hours');
+      hour1.addClass('after-hours');
+      hour2.addClass('after-hours');
+      hour3.addClass('after-hours');
+      hour4.addClass('after-hours');
+      hour5.addClass('after-hours');
     }
     
     // Get input values from local storage
